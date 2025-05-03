@@ -124,9 +124,9 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 bg-primary;
+    @apply border-border outline-ring/50 ;
   }
   body {
-    @apply bg-background text-foreground text-white leading-loose;
+    @apply bg-primary text-foreground text-white leading-loose;
   }
 }
