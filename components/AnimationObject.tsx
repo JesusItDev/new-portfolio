@@ -41,7 +41,7 @@ const AnimationObject = () => {
             animate="animate"
             exit="exit"
             transition={{
-              duration: 0.6,
+              duration: 0.4,
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}
@@ -55,7 +55,7 @@ const AnimationObject = () => {
             animate="animate"
             exit="exit"
             transition={{
-              duration: 0.6,
+              duration: 0.4,
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}
