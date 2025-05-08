@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsmono.variable}`}>
+      <body className={jetbrainsmono.variable}>
         <div className="font-main">
           <Header />
           <TransitionEffect />
