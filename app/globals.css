@@ -4,11 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary-orange: #F79256;
+  --color-primary-orange: #f79256;
 }
 
 @theme inline {
   --font-main: var(--font-jetbrainsMono);
+  --font-secondary: var(--font-rubik);
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 100rem;
   --breakpoint-3xl: 120rem;
@@ -100,7 +101,7 @@
   --secondary-foreground: oklch(0.984 0.003 247.858);
   --muted: oklch(0.279 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(76.9% 0.188 70.08)
+  --accent: oklch(76.9% 0.188 70.08);
   /* --accent: oklch(0.279 0.041 260.031); */
   --accent-foreground: oklch(0.984 0.003 247.858);
   --destructive: oklch(0.704 0.191 22.216);
@@ -124,9 +125,34 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 ;
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-primary text-foreground text-white leading-loose font-main;
   }
+}
+
+.spanDivider {
+  height: 12px;
+  width: 100vw; /* add this line to make it span full width */
+}
+
+.spanDivider:nth-of-type(1) {
+  background-color: var(--color-primary-orange);
+  box-shadow: 0 0 4px 1px var(--color-primary-orange); /* adds blur to smooth color transitions */
+  margin-top: -2px; /* layers it on top of the previous <span> */
+}
+
+.spanDivider:nth-of-type(2) {
+  opacity: 0.8;
+  background-color: #ffb88e;
+  box-shadow: 0 0 4px 1px #ffb88e;
+  margin-top: -2px;
+}
+
+.spanDivider:nth-of-type(3) {
+  opacity: 0.6;
+  background-color: rgb(250, 220, 202);
+  box-shadow: inset 0 0 4px 1px rgb(250, 220, 202);
+  margin-top: -2px;
 }

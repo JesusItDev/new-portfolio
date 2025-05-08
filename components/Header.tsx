@@ -20,7 +20,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-8">
           <Navbar />
           <Link href="/contact">
-            <Button variant="outline">Contact me!</Button>
+            <Button variant="custom">Contact me!</Button>
           </Link>
         </div>
 

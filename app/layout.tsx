@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Rubik } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -9,6 +9,12 @@ export const jetbrainsmono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-jetbrainsMono",
+});
+
+export const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-rubik",
 });
 
 export const metadata: Metadata = {
@@ -23,8 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jetbrainsmono.variable}>
-        <div className="font-main">
+      {/* <body className={jetbrainsmono.variable}> */}
+      <body className={rubik.variable}>
+        <div className="font-secondary">
           <Header />
           <TransitionEffect />
           <PageTransition>{children}</PageTransition>
