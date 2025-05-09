@@ -1,7 +1,9 @@
 import { Octokit } from "octokit";
 
+const API_KEY = process.env.API_KEY;
+
 const octokit = new Octokit({
-  auth: "YOUR-TOKEN",
+  auth: API_KEY,
 });
 
 export default async function CodeLineRetriever() {
