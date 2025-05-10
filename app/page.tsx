@@ -1,7 +1,8 @@
 import Socials from "@/components/Socials";
 import CodeLineRetriever from "@/components/CodeLineRetriever";
 import { Button } from "@/components/ui/button";
-import { Code } from "lucide-react";
+import { silkScreen } from "./layout";
+import { MdClose, MdMinimize, MdOutlineSquare } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -39,8 +40,31 @@ export default function Home() {
           <span className="spanDivider"></span>
         </div>
 
-        <div className="mt-5 container mx-auto flex justify-center bg-amber-200 h-[100px]">
-          <CodeLineRetriever />
+        {/* TERMINAL WINDOW */}
+        <div className="h-[25px] bg-[#666666] mx-auto my-0 rounded-t-[5px] box-border w-3/4 flex items-end">
+          <div
+            className={`h-[23px] bg-[#202124] rounded-t-[5px] w-[150px] ml-1 ${silkScreen.variable}`}
+          >
+            <p className="font-terminal! text-[10px] ml-1">Command Prompt</p>
+          </div>
+          <div className="flex flex-row ml-auto mr-1 gap-1 mb-1">
+            <div>
+              <MdMinimize />
+            </div>
+            <div>
+              <MdOutlineSquare />
+            </div>
+            <div>
+              <MdClose />
+            </div>
+          </div>
+        </div>
+        <div
+          className={`container mx-auto flex bg-[#202124] h-[100px] w-3/4 ${silkScreen.variable}`}
+        >
+          <div className="font-terminal ml-2 mt-.05">
+            <CodeLineRetriever />
+          </div>
         </div>
       </section>
     </div>

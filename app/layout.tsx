@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Rubik } from "next/font/google";
+import { JetBrains_Mono, Rubik, Silkscreen } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -17,6 +17,12 @@ export const rubik = Rubik({
   variable: "--font-rubik",
 });
 
+export const silkScreen = Silkscreen({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-silkScreen",
+});
+
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Jesus.It.Dev Portfolio",
@@ -31,6 +37,7 @@ export default function RootLayout({
     <html lang="en">
       {/* <body className={jetbrainsmono.variable}> */}
       <body className={rubik.variable}>
+        {/* <body className={silkScreen.variable}> */}
         <div className="font-secondary">
           <Header />
           <TransitionEffect />

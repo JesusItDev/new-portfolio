@@ -7,9 +7,14 @@
   --color-primary-orange: #f79256;
 }
 
+.font-terminal {
+  font-family: var(--font-silkScreen);
+}
+
 @theme inline {
   --font-main: var(--font-jetbrainsMono);
   --font-secondary: var(--font-rubik);
+  --font-terminal: var(--font-silkScreen);
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 100rem;
   --breakpoint-3xl: 120rem;
@@ -128,7 +133,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-primary text-foreground text-white leading-loose font-main;
+    @apply bg-primary text-white leading-loose font-main;
   }
 }
 
