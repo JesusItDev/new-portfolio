@@ -1,8 +1,7 @@
 import Socials from "@/components/Socials";
-import CodeLineRetriever from "@/components/CodeLineRetriever";
+import Separator from "@/components/Separator";
+import Terminal from "@/components/Terminal";
 import { Button } from "@/components/ui/button";
-import { silkScreen } from "./layout";
-import { MdClose, MdMinimize, MdOutlineSquare } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -27,45 +26,25 @@ export default function Home() {
               <div className="mb-5">
                 <Button variant="outline">Download CV!</Button>
               </div>
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center">
                 <Socials />
               </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-center w-full flex-col">
-          <span className="spanDivider"></span>
-          <span className="spanDivider"></span>
-          <span className="spanDivider"></span>
-          <span className="spanDivider"></span>
-        </div>
 
-        {/* TERMINAL WINDOW */}
-        <div className="h-[25px] bg-[#666666] mx-auto my-0 rounded-t-[5px] box-border w-3/4 flex items-end">
-          <div
-            className={`h-[23px] bg-[#202124] rounded-t-[5px] w-[150px] ml-1 ${silkScreen.variable}`}
-          >
-            <p className="font-terminal! text-[10px] ml-1">Command Prompt</p>
-          </div>
-          <div className="flex flex-row ml-auto mr-1 gap-1 mb-1">
-            <div>
-              <MdMinimize />
-            </div>
-            <div>
-              <MdOutlineSquare />
-            </div>
-            <div>
-              <MdClose />
-            </div>
-          </div>
-        </div>
-        <div
-          className={`container mx-auto flex bg-[#202124] h-[100px] w-3/4 ${silkScreen.variable}`}
-        >
-          <div className="font-terminal ml-2 mt-.05">
-            <CodeLineRetriever />
-          </div>
-        </div>
+        {/* DIVIDER */}
+        <Separator />
+
+        <Terminal />
+
+        {/* DIVIDER */}
+        {/* <div className="flex justify-center w-full flex-col">
+          <span className="spanDivider"></span>
+          <span className="spanDivider"></span>
+          <span className="spanDivider"></span>
+          <span className="spanDivider"></span>
+        </div> */}
       </section>
     </div>
   );

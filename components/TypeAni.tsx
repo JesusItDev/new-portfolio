@@ -3,19 +3,21 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
-const TypeAni = () => {
+interface TypeAniProps {
+  content: Array<string>; // or a more specific type if you know what it will be
+}
+
+const TypeAni = (content: TypeAniProps) => {
   return (
     <TypeAnimation
       sequence={[
-        // Same substring at the start will only be typed out once, initially
-        "We produce food for Mice",
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        "We produce food for Hamsters",
-        1000,
-        "We produce food for Guinea Pigs",
-        1000,
-        "We produce food for Chinchillas",
-        1000,
+        2000,
+        "C:\\" + content.content[0],
+        5000,
+        "C:\\" + content.content[1],
+        5000,
+        "C:\\" + content.content[2],
+        5000,
       ]}
       wrapper="span"
       speed={50}

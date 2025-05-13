@@ -26,18 +26,22 @@ async function CodeLineRetriever() {
     console.log("Response Repo: ", repoList.data[0].contents_url);
   }
 
-  let response = commitList.data[0].commit.message;
+  let response = [];
+  response.push(commitList.data[0].commit.message);
+  response.push(commitList.data[1].commit.message);
+  response.push(commitList.data[2].commit.message);
+
   const contentsList = await octokit.request(repoList.data[0].contents_url, {
     //   per_page: 2,
     sort: "updated",
   });
 
-  console.log("Response Content: ", contentsList.data);
+  console.log("CommitList Content: ", response);
 
   return (
     <>
-      <p>{`C:\\ ${response}`}</p>
-      <TypeAni />
+      <p className="text-2xl">{`C:\\Lastest Commits: `}</p>
+      <TypeAni content={response} />
     </>
   );
 }
