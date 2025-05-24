@@ -9,7 +9,7 @@ const Separator = () => {
       <motion.div>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 0 100vw"
+          // viewBox="0 0 0 100vw"
           fill="none"
           stroke="currentColor"
           strokeWidth={2}
@@ -34,7 +34,7 @@ const Separator = () => {
         </motion.svg>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 0 100vw"
+          // viewBox="0 0 0 100vw"
           fill="none"
           stroke="currentColor"
           strokeWidth={2}
@@ -59,7 +59,7 @@ const Separator = () => {
         </motion.svg>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 0 100vw"
+          // viewBox="0 0 0 100vw"
           fill="none"
           stroke="currentColor"
           strokeWidth={2}
