@@ -11,15 +11,14 @@ const TypeAboutMe = (content: TypeAniProps) => {
   return (
     <TypeAnimation
       sequence={[
-        2000,
         "Web Developer",
-        5000,
+        4000,
         "Software Engineer",
-        5000,
+        4000,
         "Project Manager",
-        5000,
+        4000,
         "Mobile Developer",
-        5000,
+        4000,
       ]}
       wrapper="span"
       speed={50}
