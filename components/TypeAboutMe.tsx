@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 interface TypeAniProps {
   content: Array<string>; // or a more specific type if you know what it will be
 }
+//TEST
 
 const TypeAboutMe = (content: TypeAniProps) => {
   return (
